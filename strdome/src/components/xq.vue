@@ -6,7 +6,7 @@
       <p>价钱：{{msg.bookPrice | fn(2)}}</p>
       <p>详情：{{msg.bookInfo}}</p>
       <img :src="msg.bookImg" alt="">
-      <div class="a2"><i class="iconfont icon-gouwuchekong"></i><div class="j1" v-if="aaa">+1</div><p class="a1">加入购物车</p></div>
+      <div class="a2"><i class="iconfont icon-gouwuchekong"></i><div class="j1" v-if="aaa">+1</div><p class="a1" @click="fn11(msg.bookId)">加入购物车</p></div>
     </div>
 </template>
 
@@ -14,13 +14,15 @@
   import swiper from '../base/swiper'
   import tb from '../base/tb'
   import {a21,a1} from "../api"
+  import Cookies from "js-cookie";
     export default {
         name: "xq",
       data(){
           return {
             msg1:"",
             msg:"",
-            aaa:false
+            aaa:false,
+            shoplist:""
           }
       },
       props:['fff'],
@@ -42,6 +44,30 @@
             this.msg=a.hotlist[this.$route.query.xq-1];
           });
         },
+        fn11(pid){
+          this.aaa=true;
+
+          var shoplists=Cookies.get('shoplist');
+          var ary = {};
+          if(shoplists){
+            ary = JSON.parse(shoplists);
+            if(ary[pid]){
+              ary[pid] += 1;
+            }else{
+              ary[pid] = 1;
+            }
+          }else{
+            console.log(pid);
+
+            ary={[pid]:1};
+          }
+          console.log(ary);
+          Cookies.set('shoplist',JSON.stringify(ary));
+          setTimeout(() => {
+            this.aaa=false;
+          }, 1000);
+
+        }
       },
       filters:{
           fn(a,b){
