@@ -6,8 +6,8 @@
 </template>
 
 <script>
-  import db from "../base/db"
-  import tb from "../base/tb"
+  import db from "../../base/db"
+  import tb from "../../base/tb"
     export default {
         name: "gr",
       components:{

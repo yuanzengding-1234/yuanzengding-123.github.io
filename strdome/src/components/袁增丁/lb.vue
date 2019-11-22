@@ -17,9 +17,9 @@
 </template>
 
 <script>
-  import db from "../base/db"
-  import tb from "../base/tb"
-  import {a1} from "../api"
+  import db from "../../base/db"
+  import tb from "../../base/tb"
+  import {a1} from "../../api"
     export default {
         name: "lb",
       components:{

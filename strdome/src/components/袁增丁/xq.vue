@@ -11,9 +11,9 @@
 </template>
 
 <script>
-  import swiper from '../base/swiper'
-  import tb from '../base/tb'
-  import {a21,a1} from "../api"
+  import swiper from '../../base/swiper'
+  import tb from '../../base/tb'
+  import {a21,a1} from "../../api"
   import Cookies from "js-cookie";
     export default {
         name: "xq",

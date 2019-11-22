@@ -27,13 +27,14 @@
         <p><button @click="fnn">确定</button> <button @click="aa=false">取消</button></p>
       </div>
       <db></db>
+      {{shoplist}}
     </div>
 </template>
 
 <script>
-  import db from "../base/db"
-  import tb from "../base/tb"
-  import { a1 } from "../api";
+  import db from "../../base/db"
+  import tb from "../../base/tb"
+  import { a1 } from "../../api";
   import Cookies from "js-cookie";
     export default {
         name: "gwc",
@@ -101,7 +102,7 @@
               this.shoplist = res.hotlist.filter(item => {
                 item.const = ary[item.bookId];
                 item.ised = true;
-                //console.log(item.const);
+                console.log(ary[item.bookId]);
                 return ary[item.bookId]; //ary[4]
               });
               return
@@ -123,10 +124,10 @@
          var ary={};
           var c=this.shoplist;
           for (var i=0;i<c.length;i++){
-            console.log(c[i]);
+            //console.log(c[i]);
             ary[c[i].bookId]=c[i].const;
           }
-          console.log(ary);
+          //console.log(ary);
           Cookies.set('shoplist',JSON.stringify(ary));
         },
         fn33(){
@@ -149,22 +150,37 @@
         fnn(){
           this.aa=false;
           var cc=[];
-          this.shoplist.forEach((a,b)=>{
-            if(this.shoplist[b].ised){
-              this.shoplist.splice(b,1)
-            };
-            if(this.shoplist[b].ised==false){
-              cc.push(this.shoplist[b])
+          for (var i=0 ;i<this.shoplist.length;i++){
+            console.log(this.shoplist[i].ised);
+            if(this.shoplist[i].ised){
+              console.log(cc);
+              this.shoplist.splice(i,1);
+              cc.push(this.shoplist[i])
             }
-          });
+          }
+          // this.shoplist.forEach((a,b)=>{
+          //   console.log(b);
+          //   console.log(a.ised);
+          //   if(a.ised){
+          //     console.log(this.shoplist);
+          //     cc.push(a)
+          //   }
+          // });
           var ary={};
           var ary1={};
-          this.shoplist.forEach((a,b)=>{
-            ary[ this.shoplist[b].bookId]=this.shoplist[b].const
-          });
-          cc.forEach((a,b)=>{
-            ary1[ cc[b].bookId]=cc[b].const
-          });
+          if (this.shoplist.length>0) {
+            this.shoplist.forEach((a,b)=>{
+              ary[ this.shoplist[b].bookId]=this.shoplist[b].const
+            });
+          }
+         if (cc.length>1){
+           console.log(cc);
+           cc.forEach((a,b)=>{
+             ary1[cc[b].bookId]=a.const
+           });
+         }
+
+
           Cookies.set('shoplist',JSON.stringify(ary));
           Cookies.set('js',JSON.stringify(ary1));
         }

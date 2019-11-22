@@ -15,10 +15,10 @@
 </template>
 
 <script>
-  import db from "../base/db"
-  import tb from "../base/tb"
-  import swiper from "../base/swiper"
-  import {a1,a21} from "../api"
+  import db from "../../base/db"
+  import tb from "../../base/tb"
+  import swiper from "../../base/swiper"
+  import {a1,a21} from "../../api"
 export default {
   name: 'HelloWorld',
   data () {
