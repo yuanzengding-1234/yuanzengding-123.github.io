@@ -1,0 +1,40 @@
+{
+    "hotlist": [
+        {  "bookImg":"//img13.360buyimg.com/n2/s240x240_jfs/t1/48517/27/1211/250162/5cef78f8E6fc2ad79/b932afe164328fb6.jpg!q70.jpg",
+            "bookName": "前端架构：从入门到微前端",
+            "bookPrice": 38.5,
+            "bookInfo":"前端架构设计全套实施手册，从架构规范、架构设计到微前端架构拆分",
+            "bookId":1
+        },
+        {  "bookImg":"//img13.360buyimg.com/n2/s240x240_jfs/t1/48517/27/1211/250162/5cef78f8E6fc2ad79/b932afe164328fb6.jpg!q70.jpg",
+            "bookName": "js从入门到微前端",
+            "bookPrice": 68.2,
+            "bookInfo":"前端架构设计全套实施手册，从架构规范、架构设计到微前端架构拆分",
+            "bookId":2
+        },
+        {  "bookImg":"//img13.360buyimg.com/n2/s240x240_jfs/t1/48517/27/1211/250162/5cef78f8E6fc2ad79/b932afe164328fb6.jpg!q70.jpg",
+            "bookName": "vue从入门到微前端",
+            "bookPrice": 58.2,
+            "bookInfo":"前端架构设计全套实施手册，从架构规范、架构设计到微前端架构拆分",
+            "bookId":3
+        },
+        {  "bookImg":"//img13.360buyimg.com/n2/s240x240_jfs/t1/48517/27/1211/250162/5cef78f8E6fc2ad79/b932afe164328fb6.jpg!q70.jpg",
+            "bookName": "vue入门",
+            "bookPrice": 78.2,
+            "bookInfo":"前端架构设计全套实施手册，从架构规范、架构设计到微前端架构拆分",
+            "bookId":4
+        },
+        {  "bookImg":"//img13.360buyimg.com/n2/s240x240_jfs/t1/48517/27/1211/250162/5cef78f8E6fc2ad79/b932afe164328fb6.jpg!q70.jpg",
+            "bookName": "node入门",
+            "bookPrice": 48.12,
+            "bookInfo":"前端架构设计全套实施手册，从架构规范、架构设计到微前端架构拆分",
+            "bookId":5
+        },
+        {  "bookImg":"//img13.360buyimg.com/n2/s240x240_jfs/t1/48517/27/1211/250162/5cef78f8E6fc2ad79/b932afe164328fb6.jpg!q70.jpg",
+            "bookName": "前端架构",
+            "bookPrice": 30.2,
+            "bookInfo":"前端架构设计全套实施手册，从架构规范、架构设计到微前端架构拆分",
+            "bookId":6
+        }
+    ]
+}
